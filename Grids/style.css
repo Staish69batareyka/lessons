@@ -1,0 +1,51 @@
+body{
+    background-color: #DEB887;
+    
+    /*https://habr.com/ru/companies/macloud/articles/564182/ - шпорка*/
+}
+[class^=card_]{
+    background-color: #8B4513;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+.card_2{
+    background-color: #F4A460;
+}
+.card_3{
+    background-color: #BC8F8F;
+}
+.card_4{
+    background-color: #FFFFFF;
+}
+.card_5{
+    background-color: #D2691E;
+    grid-area: 2/2/3/4;
+}
+.cards{
+    display: grid;
+    gap: 10px 10px;
+    grid-template: repeat(2, 100px)/repeat(3, 100px);
+    margin-bottom: 50px;
+    border: 2px solid #000000;
+    background-color: antiquewhite;
+    
+}
+.cards_2{
+    justify-items: start;
+}
+
+.cards_3{
+    align-items: end;
+}
+.cards_4{
+   justify-content: end;
+}
+.cards_4 >.card_2{
+    justify-self: end;
+    align-self: start; /*можно сократить как place-self:align-self/justify-self;*/
+}
+.cards_5{
+    justify-content: space-evenly; /*то же самое можно и с align-content*/
+}
